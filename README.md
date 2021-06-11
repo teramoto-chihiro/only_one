@@ -26,5 +26,7 @@ https://docs.google.com/spreadsheets/d/1URgYhUfmQYvtbqXwZA_6IVccRH3GBvEMGPE4eM8b
 https://cacoo.com/diagrams/k8aXgR5dnus7pzai/2815A
 ## ER図
 https://cacoo.com/diagrams/k8aXgR5dnus7pzai/C89AE
+<img width="524" alt="卒業課題ER図" src="https://user-images.githubusercontent.com/79960318/121637070-d1aad780-cac3-11eb-9091-0c3f93a10236.png">
 ## 画面遷移図
 https://cacoo.com/diagrams/k8aXgR5dnus7pzai/0BF01
+<img width="579" alt="卒業課題2" src="https://user-images.githubusercontent.com/79960318/121637078-d4a5c800-cac3-11eb-9aa1-e183c969a204.png">
