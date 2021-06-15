@@ -23,7 +23,7 @@ https://docs.google.com/spreadsheets/d/1URgYhUfmQYvtbqXwZA_6IVccRH3GBvEMGPE4eM8b
 https://docs.google.com/spreadsheets/d/1URgYhUfmQYvtbqXwZA_6IVccRH3GBvEMGPE4eM8bU4k/edit?usp=sharing
 ## ワイヤーフレーム
 https://cacoo.com/diagrams/k8aXgR5dnus7pzai/2815A
-<img width="581" alt="80db9897896a9e6ec776e29b756ddada" src="https://user-images.githubusercontent.com/79960318/121994669-ab957800-cde0-11eb-892c-ca47dd04d54a.png">
+<img width="581" alt="80db9897896a9e6ec776e29b756ddada" src="https://user-images.githubusercontent.com/79960318/121994669-ab957800-cde0-11eb-892c-ca47dd04d54a.png">                               
 ## ER図
 https://cacoo.com/diagrams/k8aXgR5dnus7pzai/C89AE
 <img width="392" alt="266ef86c2666a82f09895b4adcdaa505" src="https://user-images.githubusercontent.com/79960318/121994493-578a9380-cde0-11eb-8307-2851a41dea5d.png">
