@@ -9,7 +9,6 @@
 
 ## カリキュラム外の技術
 - active-storage
-- Docker Compose
 ## 実行手順
 ```
 $ git clone git@github.com:teramoto-chihiro/only_one.git
