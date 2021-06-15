@@ -5,11 +5,11 @@
 
 ## 就業Termの技術
 - お気に入り機能
-- 画像投稿機能
+- devise
 
 ## カリキュラム外の技術
-- devise
-- font-awesome-rails
+- active-storage
+- Docker Compose
 ## 実行手順
 ```
 $ git clone git@github.com:teramoto-chihiro/only_one.git
