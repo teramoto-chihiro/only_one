@@ -4,9 +4,10 @@
 - Ruby on Rails 5.2.5
 
 ## 就業Termの技術
-- お気に入り機能
 - devise
-- cancancan
+- フォロー機能
+- メッセージ機能
+- お気に入り機能
 
 ## カリキュラム外の技術
 - active-storage
