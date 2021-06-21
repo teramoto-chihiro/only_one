@@ -23,11 +23,17 @@
     </div>
   <% end %>
 <% end %>
-<% if user_signed_in? %>
-  <%= form_with model: [@photo, @comment], local: true do |f| %>
-    <div>
-      <%= f.text_field :body %>
-    </div>
-    <%= f.submit %>
+  <% if user_signed_in? %>
+    <%= form_with model: [@photo, @comment], local: true do |f| %>
+      <div>
+        <%= f.text_field :body %>
+      </div>
+      <%= f.submit %>
+  <% end %>
+  
+  <% if current_user.likes.exists?(photo_id: @photo.id) %>
+    <%= link_to 'unlike', [@photo, :like], method: :delete %>
+  <% else %>
+    <%= link_to 'like', [@photo, :like], method: :post %>
   <% end %>
 <% end %>
