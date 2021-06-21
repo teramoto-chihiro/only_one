@@ -8,9 +8,8 @@
   <%= link_to '写真投稿', new_photo_path %>
 </div>
 
-<% current_user.photos.each do |photo| %>
-  <div>
-    <p><%= photo.caption %></p>
-    <%= image_tag photo.image %>
-  </div>
+<% User.all.each do |user| %>
+<div>
+  <%= link_to user.email, user_path(user) %>
+</div>
 <% end %>
