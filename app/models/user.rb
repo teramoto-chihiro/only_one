@@ -9,4 +9,33 @@ class User < ApplicationRecord
   has_many :comments
   has_many :likes
   has_many :photos
+
+  def self.guest
+    find_or_create_by!(email: 'guest@guest.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.password_confirmation = user.password
+    end
+  end
+
+  def self.admin_guest
+    find_or_create_by!(email: 'admin_guest@guest.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.password_confirmation = user.password
+      user.admin = true
+    end
+  end
+
+  def update_without_current_password(params, *options)
+    params.delete(:current_password)
+
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation)
+    end
+
+    result = update_attributes(params, *options)
+    clean_up_passwords
+    result
+  end
+
 end
