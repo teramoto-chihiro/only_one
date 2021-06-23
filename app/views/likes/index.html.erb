@@ -1,15 +1,21 @@
 <% @photos.each do |photo| %>
-  <div>
-    <div>
-      <%= link_to photo.user.email, [photo.user] %>
-    </div>
-    <div>
+
+<div class="card mb-4">
+  <div class="card-image">
+    <figure class="image">
       <%= link_to [photo] do %>
         <%= image_tag photo.image %>
       <% end %>
-    </div>
+    </figure>
+  </div>
+
+  <div class="card-content">
     <div>
-      <%= photo.caption %>
+      <%= link_to photo.user.email, [photo.user] %>
+    </div>
+      <div>
+        <%= photo.caption %>
+      </div>
     </div>
   </div>
 <% end %>
