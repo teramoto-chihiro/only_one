@@ -1,11 +1,12 @@
-<h3>写真投稿</h3>
-
 <%= form_with model: @photo, local: true do |f| %>
-  <div>
-    <%= f.file_field :image %>
-  </div>
-  <div>
-    <%= f.text_area :caption %>
-  </div>
-  <%= f.submit %>
+
+<div class="field">
+  <%= f.file_field :image %>
+</div>
+
+<div class="field">
+  <%= f.text_area :caption, class: 'textarea' %>
+</div>
+
+<%= f.submit class: 'button is-primary' %>
 <% end %>

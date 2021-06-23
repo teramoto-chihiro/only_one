@@ -1,14 +1,14 @@
-<h2>Log in</h2>
+<h2><%= t('.sign_in') %></h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input' %>
   </div>
 
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.password_field :password, autocomplete: "current-password", class: 'input' %>
   </div>
 
   <% if devise_mapping.rememberable? %>
@@ -19,9 +19,11 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: 'button is-primary' %>
+    <%# <%= f.submit t('.sign_in') %>
   </div>
 <% end %>
 
-<%= link_to "管理者ゲストログイン", users_admin_guest_sign_in_path, method: :post, id: "admin_guest_login"%>
-<%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, id: "guest-login" %>
+<%= render "devise/shared/links" %>
+<%= link_to "管理者ゲストログイン", users_admin_guest_sign_in_path, method: :post, class: "px-2 nav-link", id: "admin_guest_login"%>
+<%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: "login px-2 nav-link", id: "guest-login" %>
