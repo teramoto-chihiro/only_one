@@ -13,7 +13,8 @@ Rails.application.routes.draw do
 
 
   resources :photos do
-    resource :like
+    get '/likes', to: 'likes#create'
+    get '/likes/:id/destroy', to: 'likes#destroy'
     resources :comments
   end
 
@@ -23,6 +24,6 @@ Rails.application.routes.draw do
     resource :follow
     resources :followings
     resources :followers
-    resources :likes
+    resources :likes, only: [:index]
   end
 end

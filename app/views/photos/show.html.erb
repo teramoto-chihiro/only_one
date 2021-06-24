@@ -16,10 +16,10 @@
     </div>
     <div>
       <% if user_signed_in? %>
-        <% if current_user.likes.exists?(photo_id: @photo.id) %>
-          <%= link_to 'unlike', [@photo, :like], method: :delete %>
+        <% if @like.present? %>
+          <%= link_to 'unlike', "/photos/#{@photo.id}/likes/#{@like.id}/destroy", method: :get %>
         <% else %>
-          <%= link_to 'like', [@photo, :like], method: :post %>
+          <%= link_to 'like', "/photos/#{@photo.id}/likes/", method: :get %>
         <% end %>
       <% end %>
     </div>

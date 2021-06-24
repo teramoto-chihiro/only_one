@@ -4,6 +4,7 @@ class PhotosController < ApplicationController
   def show
     @photo = Photo.find(params[:id])
     @comment = Comment.new
+    @like = @photo.likes.find_by(user_id: current_user.id)
   end
 
   def new
@@ -19,7 +20,7 @@ class PhotosController < ApplicationController
       render :new
     end
   end
-  
+
   def destroy
     current_user.photos.find(params[:id]).destroy
 

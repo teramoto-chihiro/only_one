@@ -12,8 +12,8 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    current_user.likes.find_by(photo_id: params[:photo_id]).destroy
-
+    @like = current_user.likes.find_by(photo_id: params[:photo_id])
+    @like.destroy if @like.present?
     redirect_to [:photo, { id: params[:photo_id] }]
   end
 end
