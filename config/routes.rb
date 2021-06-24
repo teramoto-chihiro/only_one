@@ -17,7 +17,9 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :users , only: [:show] do
+  resources :users , only: [:show]
+
+  resources :users do
     resource :follow
     resources :followings
     resources :followers

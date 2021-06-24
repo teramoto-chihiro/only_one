@@ -16,6 +16,12 @@
       </div>
     </nav>
 
+    <% User.all.each do |user| %>
+      <div>
+        <%= link_to user.email, [user], class: 'navbar-item' %>
+      </div>
+    <% end %>
+
     <section class="section">
       <div class="columns is-centered">
         <div class="column is-5">
